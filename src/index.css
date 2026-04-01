@@ -1,0 +1,133 @@
+/* 🌍 Reset */
+body {
+  margin: 0;
+  background: #000;
+  font-family: sans-serif;
+}
+
+/* 🧱 App Layout */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* 🔥 vertical center */
+  min-height: 100vh;
+  background: #000;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+/* 🧾 Top UI */
+.top-ui {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  z-index: 10;
+}
+
+.top-ui h1 {
+  color: #00ffcc;
+}
+
+.top-ui h2 {
+  color: #aaa;
+}
+
+/* 🎮 Game container */
+.game-container {
+  position: relative;
+  width: 480px; /* match canvas */
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 💀 Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --------------------------
+   Arura Background 
+   --------------------------*/
+
+/* ⭐ Stars at bottom */
+.starfield {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 🌌 Aurora ABOVE stars */
+.aurora-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+/* 🌌 Aurora gradient */
+.aurora-layer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    #00ffcc,
+    #22c55e,
+    #0ea5e9,
+    #9333ea,
+    #00ffcc
+  );
+  background-size: 300% 300%;
+  filter: blur(80px); /* reduced */
+  opacity: 0.12;
+}
+
+/* 🫧 Nebula blobs */
+.nebula {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.25;
+}
+
+.blob1 {
+  background: #00ffcc;
+  top: 15%;
+  left: 20%;
+}
+
+.blob2 {
+  background: #9333ea;
+  bottom: 15%;
+  right: 20%;
+}
+
+/* mode selector */
+.level-selector {
+  margin: 10px 0;
+}
+
+.level-selector button {
+  margin: 0 5px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #222;
+  color: white;
+}
+
+.level-selector button.active {
+  background: #00ffc3;
+  color: black;
+  font-weight: bold;
+}
