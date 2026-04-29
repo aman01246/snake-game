@@ -1,16 +1,129 @@
-# React + Vite
+# 🐍 Snake Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, fast, and interactive Snake Game built using React + Vite with smooth animations, sound effects, and dynamic difficulty.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Live Demo
 
-## React Compiler
+👉 https://aman01246.github.io/snake-game/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* 🎮 Classic Snake Gameplay
+* ⚡ Smooth Game Loop using `useRef` (high performance)
+* 🎯 Dynamic Speed Scaling based on snake length
+* 🎚️ Difficulty Levels:
+
+  * Easy
+  * Medium
+  * Hard
+* 🍎 Food generation system
+* 💥 Collision detection (wall + self)
+* 🔊 Sound effects:
+
+  * Eat sound
+  * Game over sound
+  * Restart sound
+* 🎨 Modern UI with:
+
+  * Aurora background
+  * Starfield animation
+  * Glassmorphism game board
+* 🔁 Restart functionality
+
+---
+
+## 🛠️ Tech Stack
+
+* ⚛️ React
+* ⚡ Vite
+* 🎨 CSS (Custom styling)
+* 🔊 HTML5 Audio API
+
+---
+
+## 📁 Project Structure
+
+```
+snake-game/
+│── public/
+│── src/
+│   ├── assets/          # images + sounds (mp3, wav)
+│   ├── components/      # UI components (Board, Canvas, Background)
+│   ├── config/          # game config (initial snake, grid)
+│   ├── hooks/           # custom hooks (game loop, controls, sound)
+│   ├── utils/           # game logic functions
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+│── index.html
+│── vite.config.js
+│── package.json
+```
+
+---
+
+## 🧠 Core Concepts Used
+
+* `useRef` → Prevent unnecessary re-renders (performance boost)
+* `useCallback` → Optimized game loop
+* Custom Hooks:
+
+  * `useGameLoop`
+  * `useControls`
+  * `useSnake`
+  * `useSound`
+
+---
+
+## ▶️ Run Locally
+
+```bash
+git clone https://github.com/aman01246/snake-game.git
+cd snake-game
+npm install
+npm run dev
+```
+
+---
+
+## 🌐 Deployment (GitHub Pages)
+
+```bash
+npm run build
+npm run deploy
+```
+
+Make sure in `vite.config.js`:
+
+```js
+base: '/snake-game/'
+```
+
+---
+
+## 🎯 Future Improvements
+
+* 🏆 High Score system (localStorage)
+* 📱 Mobile touch controls
+* ⏸️ Pause / Resume feature
+* 🌍 Multiplayer mode (WebSockets)
+* 🎨 Advanced animations & effects
+
+---
+
+## 👨‍💻 Author
+
+**Aman Kumar**
+
+* GitHub: https://github.com/aman01246
+
+---
+
+## ⭐ If you like this project
+
+Give it a ⭐ on GitHub — it helps a lot!
